@@ -1,0 +1,18 @@
+/* ============================================================
+   Fonts Family
+==============================================================*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button {font-family:Noto Sans,'Noto Sans',Arial, sans-serif;}
+
+input[type="text"],input[type="email"],input[type="number"],button,input[type="submit"],input[type="reset"],button,input[type="tel"],button,input[type="password"],input[type="url"],input[type="search"],input[type="file"],button,textarea {font-family:Noto Sans,'Noto Sans',Arial, sans-serif; }
+
+.post-type-archive-hws_webinar .TopRightBgBanner-sub{
+	display:none;
+}
+
+.post-type-archive-hws_webinar .WebinarsIntro{
+	display:none;
+}
+
+.post-type-archive-hws_webinar .WebinarFileList{
+	display:none;
+}

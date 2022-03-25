@@ -1,0 +1,62 @@
+/* globals jQuery, hwsDownloadCenter */
+(function ($) {
+    $(document).ready(function () {
+        var opts = $.extend({
+                secondDepths: {}
+            }, window.hasOwnProperty('hwsDownloadCenter') ? window.hwsDownloadCenter : {})
+            , secondDepths = opts.secondDepths
+            , firstDepth = $('#download-center-first-depth')
+            , secondDepth = $('#download-center-second-depth')
+            , navigate = $('#download-center-navigate')
+            , template = wp.template('download-center-ejs')
+            , currentKey
+            , currentIndex = 0
+        ;
+
+        console.log('download-center opts', opts);
+
+        if (!$.isEmptyObject(secondDepths)) {
+            currentKey = Object.keys(secondDepths)[0];
+
+            firstDepth.on('click', '.download-center-item', function (e) {
+                var key = e.currentTarget.dataset.key;
+
+                if (secondDepths.hasOwnProperty(key) && currentKey !== key) {
+                    currentKey = key;
+                    currentIndex = 0;
+                    secondDepth.html(template({items: opts.secondDepths[key]}));
+                }
+            });
+
+            secondDepth.on('click', '.download-center-item', function (e) {
+                // Set current selection index.
+                currentIndex = parseInt(e.currentTarget.dataset.index);
+            });
+
+            navigate.on('click', function () {
+                var items,
+                    url,
+                    target
+                ;
+                if (secondDepths.hasOwnProperty(currentKey)) {
+                    items = secondDepths[currentKey];
+
+                    if (currentIndex < items.length) {
+                        url = items[currentIndex].url;
+                        target = items[currentIndex].target;
+
+                        if (url && url.length) {
+                            if (target) {
+                                window.open(url);
+                            } else {
+                                window.location.href = url;
+                            }
+                        }
+                    }
+                }
+            });
+
+            secondDepth.html(template({items: secondDepths[currentKey]}));
+        }
+    });
+})(jQuery);

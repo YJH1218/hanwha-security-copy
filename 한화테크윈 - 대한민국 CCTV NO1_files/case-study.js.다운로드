@@ -1,0 +1,126 @@
+/**
+ * Front page's [Case study] section controller.
+ *
+ * @var jQuery
+ * @var hwsCaseStudy
+ */
+
+(function ($, hwsCaseStudy) {
+    var opts = $.extend({
+            textVisitSolution: '%s 솔루션 바로 가기',
+            nonce: '',
+            currentSlug: '',
+            currentName: '',
+            currentUrl: '',
+            items: [],
+            lang: '',
+            switchButton: true,
+        }, hwsCaseStudy),
+        container,
+        terms,
+        template,
+        anchor,
+        anchorText,
+        swiper = null;
+
+    if ('boolean' === typeof opts.switchButton) {
+        opts.switchButton = !!opts.switchButton;
+    }
+
+    function updateItems(slug) {
+        var m = updateItems.memoize;
+
+        function __updateItems(slug) {
+            console.log('__updateItems', m[slug]);
+            container.html(template(m[slug]));
+
+            if ('function' === typeof Swiper) {
+                if (swiper) {
+                    swiper.destroy();
+                    swiper = null;
+                }
+                // from main.js.
+                swiper = new Swiper('.MainCaseStudySlide-container', {
+                    slidesPerView: 4,
+                    observer: true,
+                    observeParents: true,
+                    watchOverflow: true,
+                    watchSlidesProgress: true,
+                    navigation: {
+                        nextEl: '.MainCaseStudySlide-next',
+                        prevEl: '.MainCaseStudySlide-prev'
+                    },
+                    breakpoints: {
+                        767: {
+                            scrollbar: {
+                                el: ".MainCaseStudySlide-scrollbar",
+                                hide: true,
+                            },
+                            slidesPerView: 'auto',
+                        },
+                    }
+                });
+
+                if (opts.switchButton) {
+                    anchor.attr('href', m[slug].url);
+
+                    // update button text
+                    anchorText.text(opts.textVisitSolution.replace('%s', m[slug].name));
+                }
+            }
+        }
+
+        if (!m.hasOwnProperty(slug)) {
+            wp.ajax.send('hws_get_case_study_items', {
+                type: 'get',
+                data: {
+                    nonce: opts.nonce,
+                    slug: slug,
+                    lang: opts.lang,
+                }
+            }).done(function (data) {
+                m[data.slug] = {
+                    name: data.name,
+                    url: data.url,
+                    items: data.items
+                }
+                __updateItems(data.slug);
+            });
+        } else {
+            __updateItems(slug);
+        }
+    }
+
+    updateItems.memoize = {};
+    updateItems.memoize[opts.currentSlug] = {
+        name: opts.currentName,
+        url: opts.currentUrl,
+        items: opts.items
+    };
+
+    $(document).ready(function () {
+        container = $('.MainCaseStudySlide-cont');
+        terms = $('.MainCaseStudyTab-slide');
+        template = wp.template('front-page-case-study-ejs');
+        anchor = $('.MainCaseStudyBtn > .ArrowBtnColor');
+        anchorText = anchor.find('.ArrowBtnColor-text');
+
+        console.log('opts', opts);
+
+        $('a.MainCaseStudyTab-link').on('click', function (e) {
+            var $this = $(e.currentTarget),
+                slug = $this.data('slug');
+
+            e.preventDefault();
+
+            if (slug.length) {
+                updateItems(slug);
+            }
+
+            terms.removeClass('is-Current');
+            $this.parent().addClass('is-Current');
+        });
+
+        updateItems(opts.currentSlug);
+    });
+})(jQuery, hwsCaseStudy);

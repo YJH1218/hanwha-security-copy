@@ -1,0 +1,1122 @@
+@charset "UTF-8";
+/*=========================================================
+	FilterSearch
+=========================================================*/
+.FilterSearch{
+	position:relative;
+	border:solid 1px #000;
+	padding-right:48px;
+}
+
+body .FilterSearch-text{
+	display:block;
+	padding:9px 15px;
+	font-size:14px;
+	line-height:normal;
+	font-weight:500;
+	color:#000;
+	width:100%;
+	height:38px;
+}
+
+body .FilterSearch-text::placeholder {
+  color: #D1D1D1;
+}
+
+.FilterSearch-submit{
+	position:absolute;
+	top:0;
+	right:0;
+	width:48px;
+	height:100%;
+	display:block;
+	z-index:5;
+}
+
+.FilterSearch-submit:after{
+	content:"";
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	width:16px;
+	height:16px;
+	background-image:url(../img/icon/ico-filter-search.png);
+	background-size:16px 16px;
+}
+
+/*=========================================================
+	FilterCount
+=========================================================*/
+.ListFilterCount{
+	font-size:14px;
+	line-height:1.2em;
+	color:#000;
+}
+
+.ListFilterCount-count{
+	color:#F37321;
+	font-weight:500;
+}
+
+/*=========================================================
+	FilterSearch
+=========================================================*/
+.ListTopFilterSearch{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ListTopFilterSearchCount{
+	flex: 0 0 calc(100% - 244px);
+    max-width: calc(100% - 244px);
+	order:1;
+}
+
+.ListTopFilterSearchSearch{
+	flex: 0 0 244px;
+    max-width: 244px;
+	order:2;
+}
+
+/*Responsive*/
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.ListTopFilterSearch{
+		display:block;
+	}
+	
+	.ListTopFilterSearchCount{
+		flex:none;
+		max-width:100%;
+		text-align:right;
+	}
+	
+	.ListTopFilterSearchSearch{
+		flex:none;
+		max-width:100%;
+		margin-bottom:15px;
+	}
+}
+
+/*=========================================================
+	PDF Post
+=========================================================*/
+.PdfPost-list{
+	overflow:hidden;
+	margin:-15px -12px;
+}
+
+.PdfPost-item{
+	width:25%;
+	float:left;
+	padding:15px 12px;
+}
+
+.PdfPost-item:nth-child(4n + 1){
+	clear:both;
+}
+
+.PdfPostItem{
+	background-color:#fff;
+}
+
+.PdfPostItemThumbnail{
+	display:block;
+	line-height:0;
+	position:relative;
+	overflow:hidden;
+}
+
+.PdfPostItemThumbnail:after{
+	content:"";
+	display:block;
+	padding-bottom:62%;
+}
+
+.PdfPostItemThumbnail img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+
+.PdfPostItemCont-title{
+	font-size:16px;
+	line-height:1.5em;
+	color:#000;
+	font-weight:500;
+	height:4.6em;
+	overflow:hidden;
+	margin-bottom:10px;
+	 display:-webkit-box;
+    -webkit-line-clamp:3; /* 라인수 */
+    -webkit-box-orient:vertical;
+	white-space:normal;
+	 text-overflow:ellipsis;
+}
+
+.PdfPostItemCont{
+	padding:19px 14px 25px;
+}
+
+.PdfPostItemContMeta{
+	overflow:hidden;
+	margin:0 -4px;
+}
+
+.PdfPostItemContMeta-item{
+	width:50%;
+	float:left;
+	padding:0 4px;
+}
+
+.PdfPostItemContMeta-item a{
+	width:100%;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.PdfPost-list{
+		margin:-1.0416vw -0.83333vw;
+	}
+
+	.PdfPost-item{
+		padding:1.0416vw 0.83333vw;
+	}
+
+
+	.PdfPostItemCont-title{
+		font-size:1.1111vw;
+		margin-bottom:0.6944vw;
+	}
+
+	.PdfPostItemCont{
+		padding:1.31944vw 0.972vw 1.73611vw;
+	}
+
+	.PdfPostItemContMeta{
+		margin:0 -0.2777vw;
+	}
+
+	.PdfPostItemContMeta-item{
+		padding:0 0.2777vw;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.PdfPost-list{
+		margin:-1.0416vw -0.83333vw;
+	}
+
+	.PdfPost-item{
+		padding:1.0416vw 0.83333vw;
+		width:33.333%;
+	}
+
+	.PdfPost-item:nth-child(4n + 1){
+		clear:none;
+	}
+	
+	.PdfPost-item:nth-child(3n + 1){
+		clear:both !important;
+	}
+
+	.PdfPostItemCont-title{
+		font-size:1.7111vw;
+		margin-bottom:0.6944vw;
+	}
+
+	.PdfPostItemCont{
+		padding:1.31944vw 0.972vw 1.73611vw;
+	}
+
+	.PdfPostItemContMeta{
+		margin:0 -0.2777vw;
+	}
+
+	.PdfPostItemContMeta-item{
+		padding:0 0.2777vw;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.PdfPost-list{
+		margin:-5px -5px;
+	}
+
+	.PdfPost-item{
+		padding:5px 5px;
+		width:50%;
+	}
+
+	.PdfPost-item:nth-child(4n + 1){
+		clear:none;
+	}
+	
+	.PdfPost-item:nth-child(odd){
+		clear:both !important;
+	}
+
+	.PdfPostItemCont-title{
+		font-size:13px;
+		margin-bottom:10px;
+	}
+
+	.PdfPostItemCont{
+		padding:12px 10px 20px;
+	}
+
+	.PdfPostItemContMeta{
+		margin:0 -5px;
+	}
+
+	.PdfPostItemContMeta-item{
+		padding:0 5px;
+	}
+}
+
+@media screen and (max-width: 499px) and (min-width: 1px) {
+	.PdfPost-item{
+		width:100%;
+		float:none;
+		clear:both !important;
+	}
+	
+	.PdfPostItemCont-title{
+		max-height: 4.6em;
+		height:auto;
+		margin-bottom:15px;
+	}
+}
+
+/*=========================================================
+	ResizeDownloadBtn
+=========================================================*/
+.ResizeDownloadBtn{
+	display:inline-block;
+	border:solid 2px #000;
+	padding:10px 5px;
+	border-radius:60px;
+	text-align:center;
+	font-size:0;
+	line-height:0;
+	min-width:110px;
+}
+
+.ResizeDownloadBtn:after{
+	width:0px;
+	height:0px;
+	opacity:0;
+	visibility:hidden;
+	position:absolute;
+	z-index:-1;
+	content: url(../img/icon/ico-btn-download-h.png);
+}
+
+
+.ResizeDownloadBtn-text{
+	display:inline-block;
+	position:relative;
+	padding-right:20px;
+	font-size:14px;
+	line-height:1.2em;
+	color:#000;
+	font-weight:bold;
+	white-space:nowrap;
+}
+
+.ResizeDownloadBtn-text:after{
+	content:"";
+	width:15px;
+	height:14px;
+	position:absolute;
+	top:50%;
+	right:0;
+	transform:translateY(-50%);
+	background-image:url(../img/icon/ico-btn-download.png);
+	background-size:15px 14px;
+}
+
+@media screen and (min-width: 1025px) {
+	.ResizeDownloadBtn:hover{
+		background-color:#f27322;
+		border:solid 2px #f27322;
+	}
+	
+	.ResizeDownloadBtn:hover .ResizeDownloadBtn-text{
+		color:#fff;
+	}
+	
+	.ResizeDownloadBtn:hover .ResizeDownloadBtn-text:after{
+		background-image:url(../img/icon/ico-btn-download-h.png);
+	}
+}
+
+/*Responsive*/
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.ResizeDownloadBtn{
+		padding:0.69444vw 0.3472vw;
+		border-radius:4.1666vw;
+		min-width:7.63888vw;
+	}
+
+	.ResizeDownloadBtn-text{
+		padding-right:1.388vw;
+		font-size:0.9722vw;
+	}
+
+	.ResizeDownloadBtn-text:after{
+		width:1.0416vw;
+		height:0.9722vw;
+		background-size:1.0416vw 0.9722vw;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.ResizeDownloadBtn{
+		padding:0.79444vw 0.3472vw;
+		border-radius:4.1666vw;
+		min-width:7.63888vw;
+	}
+
+	.ResizeDownloadBtn-text{
+		padding-right:1.888vw;
+		font-size:1.5722vw;
+	}
+
+	.ResizeDownloadBtn-text:after{
+		width:1.5416vw;
+		height:1.279722vw;
+		background-size:1.5416vw 1.279722vw;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.ResizeDownloadBtn{
+		padding:5px 5px;
+		border-radius:40px;
+		min-width:0;
+	}
+
+	.ResizeDownloadBtn-text{
+		padding-right:15px;
+		font-size:12px;
+	}
+
+	.ResizeDownloadBtn-text:after{
+		width:11px;
+		height:10px;
+		background-size:11px 10px;
+	}
+}
+
+/*=========================================================
+	ResizeViewBtn
+=========================================================*/
+.ResizeViewBtn{
+	display:inline-block;
+	border:solid 2px #000;
+	padding:10px 5px;
+	border-radius:60px;
+	text-align:center;
+	font-size:0;
+	line-height:0;
+	min-width:110px;
+}
+
+.ResizeViewBtn:after{
+	width:0px;
+	height:0px;
+	opacity:0;
+	visibility:hidden;
+	position:absolute;
+	z-index:-1;
+	content: url(../img/icon/ico-btn-view-h.png);
+}
+
+.ResizeViewBtn-text{
+	display:inline-block;
+	position:relative;
+	padding-right:28px;
+	font-size:14px;
+	line-height:1.2em;
+	color:#000;
+	font-weight:bold;
+	white-space:nowrap;
+}
+
+.ResizeViewBtn-text:after{
+	content:"";
+	width:24px;
+	height:14px;
+	position:absolute;
+	top:50%;
+	right:0;
+	transform:translateY(-50%);
+	background-image:url(../img/icon/ico-btn-view.png);
+	background-size:24px 14px;
+	margin-top:1px;
+}
+
+@media screen and (min-width: 1025px) {
+	.ResizeViewBtn:hover{
+		background-color:#f27322;
+		border:solid 2px #f27322;
+	}
+	
+	.ResizeViewBtn:hover .ResizeViewBtn-text{
+		color:#fff;
+	}
+	
+	.ResizeViewBtn:hover .ResizeViewBtn-text:after{
+		background-image:url(../img/icon/ico-btn-view-h.png);
+	}
+}
+
+/*Responsive*/
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.ResizeViewBtn{
+		padding:0.6944vw 0.347vw;
+		border-radius:4.1666vw;
+		min-width:7.6388vw;
+	}
+
+	.ResizeViewBtn-text{
+		padding-right:1.9444vw;
+		font-size:0.9722vw;
+	}
+
+	.ResizeViewBtn-text:after{
+		width:1.666vw;
+		height:0.9722vw;
+		background-size:1.666vw 0.9722vw;
+		margin-top:0.0694vw;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.ResizeViewBtn{
+		padding:0.7944vw 0.347vw;
+		border-radius:4.1666vw;
+		min-width:7.6388vw;
+	}
+
+	.ResizeViewBtn-text{
+		padding-right:2.5444vw;
+		font-size:1.5722vw;
+	}
+
+	.ResizeViewBtn-text:after{
+		width:2.066vw;
+		height:1.0722vw;
+		background-size:2.066vw 1.0722vw;
+		margin-top:0.1694vw;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.ResizeViewBtn{
+		padding:5px 5px;
+		border-radius:40px;
+		min-width:0;
+	}
+
+	.ResizeViewBtn-text{
+		padding-right:19px;
+		font-size:12px;
+	}
+
+	.ResizeViewBtn-text:after{
+		width:16px;
+		height:10px;
+		background-size:16px 10px;
+	}
+}
+
+/*=========================================================
+	Scrollpolicy
+=========================================================*/
+.ScrollpolicySection{
+	margin-bottom:54px;
+}
+
+.Scrollpolicy{
+	height:180px;
+	border:solid 1px #D1D1D1;
+	padding:35px 30px;
+	overflow:hidden;
+	overflow-y:auto;
+	margin-bottom:20px;
+	font-size:16px;
+	line-height:1.7em;
+	color:#707070;
+	background-color:#fff;
+}
+
+.Scrollpolicy h1,.Scrollpolicy h2,.Scrollpolicy h3,.Scrollpolicy h4,.Scrollpolicy h5,.Scrollpolicy h6{
+	font-size:20px;
+	color:#000;
+	font-weight:bold;
+	margin-bottom:13px;
+}
+
+.Scrollpolicy p{
+	margin-bottom:15px;
+}
+
+.Scrollpolicy p:last-child{
+	margin-bottom:0;
+}
+
+@media screen and (min-width: 1025px){
+	.Scrollpolicy::-webkit-scrollbar {
+	  width: 3px;
+	}
+
+	.Scrollpolicy::-webkit-scrollbar-track {
+	  background: #dddddd;
+	}
+
+	.Scrollpolicy::-webkit-scrollbar-thumb {
+	  background: #000;
+	}
+
+	.Scrollpolicy::-webkit-scrollbar-thumb:hover {
+	  background: #000;
+	}
+}
+
+.ScrollpolicyMeta{
+	position:relative;
+}
+
+.ScrollpolicyMeta:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.ScrollpolicyMeta-link{
+	font-size:18px;
+	line-height:1.2em;
+	color:#F37321;
+	font-weight:500;
+	text-decoration:underline;
+}
+
+.ScrollpolicyMeta .FormBasicCheck{
+	position:absolute;
+	top:50%;
+	right:0;
+	transform:translateY(-50%);
+}
+
+/*Responsive*/
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.ScrollpolicySection{
+		margin-bottom:40px;
+	}
+	
+	.Scrollpolicy{
+		padding:30px 30px;
+		font-size:16px;
+	}
+	
+	.Scrollpolicy h1, .Scrollpolicy h2, .Scrollpolicy h3, .Scrollpolicy h4, .Scrollpolicy h5, .Scrollpolicy h6{
+		font-size:18px;
+	}
+	
+	.ScrollpolicyMeta-link{
+		font-size:16px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.ScrollpolicySection{
+		margin-bottom:30px;
+	}
+	
+	.Scrollpolicy{
+		padding:25px 25px;
+		font-size:14px;
+	}
+	
+	.Scrollpolicy h1, .Scrollpolicy h2, .Scrollpolicy h3, .Scrollpolicy h4, .Scrollpolicy h5, .Scrollpolicy h6{
+		font-size:16px;
+	}
+	
+	.ScrollpolicyMeta-link{
+		font-size:14px;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.ScrollpolicySection{
+		margin-bottom:25px;
+	}
+	
+	.Scrollpolicy{
+		padding:20px 20px;
+		font-size:12px;
+	}
+	
+	.Scrollpolicy h1, .Scrollpolicy h2, .Scrollpolicy h3, .Scrollpolicy h4, .Scrollpolicy h5, .Scrollpolicy h6{
+		font-size:14px;
+	}
+	
+	.ScrollpolicyMeta-link{
+		font-size:12px;
+	}
+}
+
+/*=========================================================
+	FormBasicCheck
+=========================================================*/
+.FormBasicCheck-label{
+	font-size:18px;
+	line-height:1.2em;
+	color:#000;
+	font-weight:500;
+	padding-left:31px;
+	position:relative;
+	display:block;
+	cursor:pointer;
+}
+
+.FormBasicCheck-checkbox{
+	display:none;
+}
+
+.FormBasicCheck-label:before{
+	content:"";
+	width:19px;
+	height:19px;
+	border:solid 2px #D1D1D1;
+	position:absolute;
+	top:0px;
+	left:0;
+}
+
+.FormBasicCheck-checkbox:checked + .FormBasicCheck-label:before{
+	background-image:url(../img/icon/ico-check.png);
+	background-size:12px 8px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-color:#F37321;
+	border-color:#F37321;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.FormBasicCheck-label{
+		font-size:16px;
+	}
+	
+	.FormBasicCheck-label:before{
+		top:-2px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.FormBasicCheck-label{
+		font-size:14px;
+	}
+	
+	.FormBasicCheck-label:before{
+		top:-2px;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.FormBasicCheck-label{
+		font-size:14px;
+	}
+	
+	.FormBasicCheck-label:before{
+		top:-2px;
+	}
+	
+	.ScrollpolicySection .FormBasicCheck-label{
+		font-size:12px;
+		padding-left: 22px;
+	}
+	
+	.ScrollpolicySection .FormBasicCheck-label:before{
+		width:14px;
+		height:14px;
+		top:-2px;
+	}
+}
+
+/*=========================================================
+BasicSelect
+=========================================================*/
+.FormSelect{
+	position:relative;
+	width:100%;
+	height:49px;
+}
+
+.FormSelect-text{
+	font-size:18px;
+	line-height:1.2em;
+	color:#000;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	display:block;
+	padding:13px 15px;
+	padding-right:42px;
+	background-color:#fff;
+	border: solid 1px #D1D1D1;
+	position:relative;
+	height:49px;
+}
+
+.FormSelect-text:after{
+	content:"";
+	width:12px;
+	height:5px;
+	background-image:url(../img/icon/ico-formselect-arrow.png);
+	background-size:12px 5px;
+	position:absolute;
+	top:50%;
+	right:18px;
+	transform:translateY(-50%);
+}
+
+.FormSelect-list{
+	position:absolute;
+	left:0;
+	right:0;
+	z-index:50;
+	background-color:#fff;
+	border: solid 1px #D1D1D1;
+	border-top:none;
+	max-height:230px;
+	display:none;
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+@media screen and (min-width: 1025px){
+	.FormSelect-list::-webkit-scrollbar {
+	  width: 3px;
+	}
+
+	.FormSelect-list::-webkit-scrollbar-track {
+	  background: #dddddd;
+	}
+
+	.FormSelect-list::-webkit-scrollbar-thumb {
+	  background: #000;
+	}
+
+	.FormSelect-list::-webkit-scrollbar-thumb:hover {
+	  background: #000;
+	}
+}
+
+.FormSelect-link{
+	display:block;
+	font-size:14px;
+	line-height:1.4em;
+	color:#000;
+	padding:13px 15px;
+}
+
+.FormSelect-item{
+	border-top: solid 1px #D1D1D1;
+}
+
+.FormSelect-item:first-child{
+	border-top:none;
+}
+
+.FormSelect.is-Open .FormSelect-text:after{
+	transform:translateY(-50%) rotate(180deg);
+}
+
+@media screen and (min-width: 1025px) {
+	.FormSelect-link:hover{
+		color:#F37321;
+	}
+}
+
+/*Responsive*/
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.FormSelect{
+		height:46px;
+	}
+	
+	.FormSelect-text{
+		font-size:16px;
+		line-height: 1.14em;
+		height:46px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.FormSelect{
+		height:42px;
+	}
+	
+	.FormSelect-text{
+		font-size:14px;
+		line-height: 1em;
+		height:42px;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.FormSelect{
+		height:42px;
+	}
+	
+	.FormSelect-text{
+		font-size:14px;
+		line-height: 1em;
+		height:42px;
+	}
+	
+	.FormSelect-link{
+		font-size:13px;
+	}
+	
+	.FormSelect-list{
+		max-height:180px;
+	}
+}
+
+
+
+
+/* =========================================================
+	DottedBullet
+=========================================================*/
+
+.DottedBullet-item:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.DottedBullet-bullet{
+	display:block;
+	float:left;
+	padding-right:4px;
+	color:#F37321;
+	font-size:16px;
+	line-height:1.6em;
+}
+.DottedBullet-text{
+	display:block;
+	overflow:hidden;
+	color:#000;
+	font-size:16px;
+	line-height:1.8em;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.DottedBullet-text{
+		font-size:14px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+	.DottedBullet-text{
+		font-size:13px;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.DottedBullet-text{
+		font-size:13px;
+	}
+}
+
+
+
+/*=========================================================
+	DownloadBtn
+=========================================================*/
+.DownloadBtn{
+	display:block;
+    background-color: #fff;
+    border: 2px solid #F37321;
+    border-radius: 40px;
+    padding: 12px 26px;
+	position:relative;
+}
+.DownloadBtn:after{
+	content:'';
+	display:block;
+}
+.DownloadBtn-text{
+	display:block;
+	padding-right:26px;
+	position:relative;
+    color: #F37321;
+	font-size: 16px;
+    font-weight: 500;
+	line-height:1.4em;
+}
+.DownloadBtn-text:after{
+	content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon/ico-ButtonDownload.png);
+    background-size: 18px 18px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+/*Responsive*/
+@media screen and (min-width: 1025px) {
+	.DownloadBtn:hover{
+		background-color:#F37321;
+	}	
+	.DownloadBtn:hover .DownloadBtn-text{
+		color:#fff;
+	}
+	.DownloadBtn:hover .DownloadBtn-text:after{
+		background-image: url(../img/icon/ico-ButtonDownload-w.png);
+	}
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.DownloadBtn-text{
+		font-size:14px;
+	}
+	.DownloadBtn-text:after{
+		width: 16px;
+		height: 16px;
+		background-size: 16px 16px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+	.DownloadBtn{
+		padding:10px 18px;
+	}
+	.DownloadBtn-text{
+		padding-right:20px;
+		font-size:13px;
+	}
+	.DownloadBtn-text:after{
+		width: 14px;
+		height: 14px;
+		background-size: 14px 14px;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.DownloadBtn{
+		padding:8px 8px;
+		text-align:center;
+	}
+	.DownloadBtn-text{
+		padding-right:20px;
+		font-size:12px;
+	}
+	.DownloadBtn-text:after{
+		width: 14px;
+		height: 14px;
+		background-size: 14px 14px;
+	}
+}
+
+
+
+/* =========================================================
+	ShareBtn
+=========================================================*/
+.ShareBtn{
+	display:block;
+    background-color: #fff;
+    border: 2px solid #F37321;
+    border-radius: 40px;
+    padding: 12px 26px;
+	position:relative;
+}
+.ShareBtn:after{
+	content:'';
+	display:block;
+}
+.ShareBtn-text{
+	display:block;
+	padding-right:26px;
+	position:relative;
+    color: #F37321;
+	font-size: 16px;
+    font-weight: 500;
+	line-height:1.4em;
+}
+.ShareBtn-text:after{
+	content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon/ico-ShareButton-o.png);
+    background-size: 18px 18px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+/*Responsive*/
+@media screen and (min-width: 1025px) {
+	.ShareBtn:hover{
+		background-color:#F37321;
+	}	
+	.ShareBtn:hover .ShareBtn-text{
+		color:#fff;
+	}
+	.ShareBtn:hover .ShareBtn-text:after{
+		background-image: url(../img/icon/ico-ShareButton-w.png);
+	}
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+	.ShareBtn-text{
+		font-size:14px;
+	}
+	.ShareBtn-text:after{
+		width: 16px;
+		height: 16px;
+		background-size: 16px 16px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+	.ShareBtn{
+		padding:10px 18px;
+	}
+	.ShareBtn-text{
+		padding-right:20px;
+		font-size:13px;
+	}
+	.ShareBtn-text:after{
+		width: 14px;
+		height: 14px;
+		background-size: 14px 14px;
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	.ShareBtn{
+		padding:8px 10px;
+		text-align:center;
+	}
+	.ShareBtn-text{
+		padding-right:10px;
+		font-size:12px;
+	}
+	.ShareBtn-text:after{
+		width: 14px;
+		height: 13px;
+		background-size: 14px 13px;
+	}
+}
+
