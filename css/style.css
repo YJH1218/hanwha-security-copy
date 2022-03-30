@@ -58,14 +58,31 @@
     position: relative;
     display: inline-block;
 }
+.header-wrap > .header > .nav-box > ul > li{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.header-wrap > .header > .nav-box > ul > li img{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .header-wrap > .header > .site-box{
     background-color: #666;
     height: 79px;
     position: relative;
 }
-.header-wrap > .header > .site-box > ul > li >img{
-    position: absolute ;
-    top: 50% ;
-    transform: translateY(-50%)
+.header-wrap > .header > .site-box > ul > li{
+ margin-left: 10px;
+ margin-right: 10px;
+}
+.header-wrap > .header > .site-box > ul > li:last-child{
+  margin-right: 0;
+}
+.header-wrap > .header > .site-box > ul > li i{
+  width: 25px;
 }
 /* header ed */
