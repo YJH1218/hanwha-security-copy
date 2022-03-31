@@ -26,10 +26,15 @@
     max-width: 1200px ;
     margin: 0 auto;
   }
+  .w50-box{
+    width: 50%;
+  }
+  .w100-box{
+    width: 100%;
+  }
 
 /* header st */
 .header-wrap{
-    width: 100%;
     height: 79px;
     border-bottom: 1px solid #555;
     position: fixed;
@@ -71,7 +76,6 @@
 }
 
 .header-wrap > .header > .site-box{
-    background-color: #666;
     height: 79px;
     position: relative;
 }
@@ -89,15 +93,52 @@
 
 /* slider st */
 .slider-wrap{
-  width: 100%;
   margin: 0 auto;
 }
-.slider-wrap .slider .content > img{
-  width: 100%;
-  background-size: cover;
+.slider-wrap .slider .content >.w100-box{
+  position: relative;
 }
-
-
+.slider-wrap .slider .content >.w100-box > .img-box{
+  padding-bottom: 47.5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slider-wrap .slider .content >.w100-box > .overlay-box >.text-box{
+  width: 1280px;
+  height: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+.slider-wrap .slider .content >.w100-box > .overlay-box >.text-box > .t-box > img{
+  width: 120px;
+  transform: translateY(50%);
+}
+.slider-wrap .slider .content >.w100-box > .overlay-box >.text-box > .t-box > p{
+  font-size: 27px;
+  font-weight: 600;
+}
+.slider-wrap .slider .content >.w100-box > .overlay-box >.text-box > .m-txt{
+  height: 140px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 55px ;
+  font-weight: bold;
+}
+.slider-wrap .slider .content >.w100-box > .overlay-box >.text-box .btn{
+  height: 25px;
+  width: 125px;
+  padding: 12.5px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+.slider-wrap .slider .content >.w100-box > .overlay-box >.text-box .btn i{
+  padding-left: 25px;
+}
 /* slider ed */
 
 /* section st */
