@@ -86,3 +86,25 @@
   width: 25px;
 }
 /* header ed */
+
+/* slider st */
+.slider-wrap{
+  width: 100%;
+  margin: 0 auto;
+}
+.slider-wrap .slider .content > img{
+  width: 100%;
+  background-size: cover;
+}
+
+
+/* slider ed */
+
+/* section st */
+.section{
+  margin-top: 100px;
+}
+.section > h1{
+  text-align: center;
+}
+/* section 01 st */
