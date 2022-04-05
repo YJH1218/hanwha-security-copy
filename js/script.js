@@ -9,6 +9,10 @@ $(document).ready(function(){
       autoplay: 3000,
     })
 
-
+    $('.section02 > .slider-wrap03 >.slider').slick({
+      slidesToShow: 4,
+      SlidesToScroll: 1,
+      
+    })
 
   });
