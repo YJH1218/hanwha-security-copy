@@ -20,7 +20,5 @@ $(document).ready(function(){
       nextArrow: $(".section02 > .slider-wrap03 > .next-btn") ,
     })
 
-    // $('.section02 > .slider-wrap03 > .prev-btn').slick('slickPrev');
-    // $('.section02 > .slider-wrap03 > .next-btn').slick('slickNext');
 
   });
