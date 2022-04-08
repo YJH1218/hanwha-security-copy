@@ -390,4 +390,121 @@
   font-weight: 600;
 }
 /* section 03 ed */
+/* footer st */
+.footer-wrap{
+  margin-top: 130px;
+  background-color: #1a1a1a;
+  color: #eee;
+}
+.footer-wrap > .footer-nav > ul > li{
+  width: 25%;
+  height: 70px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 70px;
+  font-size: 17.5px;
+  font-weight: bold;
+  border-top: 0;
+}
+.footer-wrap > .footer-nav > ul > li:hover{
+  background-color: #F37321;
+  border: 0;
+}
+.footer-wrap > .footer-info-wrap{
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .logo-box{
+  width: 340px;
+  font-size: 13px;
+  line-height: 20px;
+  margin-right: 20px;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .logo-box > svg{
+  width: 175px;
+  margin-bottom: 10px;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .info > ul{
+  width: 120px;
+  margin-right: 10px;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .info > ul > li{
+  font-size: 12px;
+  font-weight: normal;
+  color: #eee;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .info > ul > li:hover{
+  color: #fff;
+  font-weight: bold;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .footer-info-letter{
+  width: 340px;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .footer-info-letter > p{
+  font-size: 25px;
+  font-weight: bold;
+} 
+.footer-wrap > .footer-info-wrap > .footer-info > .footer-info-letter > .btn{
+  background-color: #F37321;
+  padding: 10px 20px 10px 20px;
+  margin-right: 50px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .footer-info-letter > .icon-box{
+  font-size: 20px;
+  line-height: 30px;
+  color: #ccc;
+  margin-top: 20px;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .footer-info-letter > .icon-box > a{
+  margin-right: 5px;
+}
+.footer-wrap > .footer-info-wrap > .footer-info > .footer-info-letter > .icon-box > a:hover{
+  color: #fff;
+}
+.footer-wrap > .footer-copy-right{
+  position: relative;
+  line-height: 60px;
+}
+.footer-wrap > .footer-copy-right > p{
+  font-size: 11.5px;
+}
+.footer-wrap > .footer-copy-right > .site-btn{
+  width: 200px;
+  height: 40px;
+  background-color: #000;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.footer-wrap > .footer-copy-right > .site-btn > p{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: bold;
+}
+.footer-wrap > .footer-copy-right > .site-btn > i{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 23px;
+  color: #aaa;
+}
 
+
+
+
+
+/* footer ed */
