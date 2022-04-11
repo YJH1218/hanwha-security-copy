@@ -9,6 +9,7 @@ $(document).ready(function(){
       vertical: true,
       verticalSwiping: true,
       autoplay: 3000,
+      arrows: false,
     })
     // 슬라이드 3
     $('.section02 > .slider-wrap03 >.slider').slick({
